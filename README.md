@@ -127,6 +127,19 @@ npm install
 # 4. 開発サーバー起動
 npm run dev
 
+```
+---
+### 開発スタックの技術構成
+| 要素    | 技術                                               |
+| ----- | ------------------------------------------------ |
+| フロント  | Next.js (App Router構成), TypeScript, Tailwind CSS |
+| UI管理  | Zustand（状態管理）, Chart.js（グラフ）                     |
+| 認証    | Firebase Authentication                          |
+| データ保存 | Firebase Firestore                               |
+| AI連携  | OpenAI API（gpt-3.5/4）                            |
+| デプロイ  | Vercel                                           |
+| その他   | ESLint, Prettier, dotenv                         |
+
 
 ---
 
