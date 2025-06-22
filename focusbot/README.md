@@ -1,6 +1,7 @@
 # 📚 FocusBot – AIがあなたの学習を最適化するパーソナル学習プランナー
 
-![screenshot(設置予定)](./public/Copilot_20250622_215459.png)
+<img alt="アプリイメージ" src="./public/Copilot_20250622_215459.png" width="250" style="display: block; margin: 0 auto;">
+<br>
 
 > ✨ **資格取得や語学学習に取り組む人のための、AIパーソナルコーチ**  
 > OpenAI × Next.js × Firebase で構築されたSaaS風アプリです。
