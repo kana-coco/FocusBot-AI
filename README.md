@@ -111,7 +111,7 @@
 
 ```bash
 # 1. リポジトリをクローン
-git clone https://github.com/your-username/focusbot.git　
+git clone https://github.com/kana-coco/FocusBot-AI.git　
 cd focusbot
 
 # 2. 環境変数設定
