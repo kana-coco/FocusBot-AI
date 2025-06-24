@@ -8,7 +8,7 @@
   - [x] Firebaseプロジェクト作成
   - [x] lib/firebase.ts を作成　AuthとFirestoreを初期化
 - [ ] OpenAI APIとの連携
-  - [ ] lib/openai.ts を作成
+  - [x] lib/openai.ts を作成
   - [ ] /app/api/gpt/route.ts でOpenAI APIと接続
 - [ ] 画面構成とページ作成
   - [ ] /app/planner/page.tsx（フォーム＆結果）

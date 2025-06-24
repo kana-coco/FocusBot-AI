@@ -137,9 +137,16 @@ https://console.firebase.google.com/
 - Authenticationを匿名ログイン/メールパスワードで設定
 
 4. lib/firebase.ts を作成
-Next.jsアプリから FirebaseのFirestoreとAuth機能 を使えるように、SDKを初期化しておきます。
+Next.jsアプリから FirebaseのFirestoreとAuth機能を使えるように、
+SDKを初期化しておきます。  
 これにより、どのコンポーネント・API Routeからでも db や auth を import して使えるようになります。
 
 実装ファイル：lib/firebase.ts
 
+5. lib/openai.ts を作成  
+OpenAIへのプロンプト生成とAPI通信が必要です。  
+この処理をまとめて lib/openai.ts に定義します。
 
+ChatGPT APIは 会話形式 を前提にしており、system でAIの振る舞いを指示し、  
+user で質問内容を渡すのがベストプラクティス  
+temperature を調整することでアイデアの多様性 or 論理性のバランスを制御できる
