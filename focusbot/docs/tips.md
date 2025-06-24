@@ -24,6 +24,7 @@ Authentication → ユーザーごとのデータ管理
 FirestoreはNoSQLなので、構造の自由度が高く、ユーザーごとに学習プランやタスクを柔軟に管理できる
 
 > axiosをなぜ採用するか
+
 → HTTPクライアント（fetchのラッパー）
 
 フォームからAPIルートへのリクエスト送信に使う
@@ -31,6 +32,19 @@ FirestoreはNoSQLなので、構造の自由度が高く、ユーザーごとに
 POSTリクエストやAPIエラー処理がとても簡潔に書ける。
 
 > process.env.NEXT_PUBLIC_...! の 「!」 はなぜ必要？
+
 lib/firebase.ts
 TypeScriptで「環境変数は必ずあるよ」と明示するための Non-null assertion
 .env.local に値が入っていないとビルド時にエラーになるので、安全性向上にも役立つ
+
+> POST(req: Request) を使う理由
+
+src/app/api/gpt/route.ts 
+- GETではセキュアな入力送信が難しい（URLにプロンプトが出てしまう）
+- POSTであればJSON形式で送信でき、安全かつ柔軟
+
+> NextResponse.json() を使う理由
+
+src/app/api/gpt/route.ts 
+- App Routerでは res.status(200).json() のような旧式ではなく、NextResponse を使うのが標準
+- 型安全でエラーレスポンスも簡潔に記述可能

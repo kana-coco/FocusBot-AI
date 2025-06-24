@@ -150,3 +150,8 @@ OpenAIへのプロンプト生成とAPI通信が必要です。
 ChatGPT APIは 会話形式 を前提にしており、system でAIの振る舞いを指示し、  
 user で質問内容を渡すのがベストプラクティス  
 temperature を調整することでアイデアの多様性 or 論理性のバランスを制御できる
+
+6. /app/api/gpt/route.ts でOpenAI APIと接続
+
+フロントエンドから直接OpenAI APIを叩くのではなく、  
+Next.jsのAPI Routeを仲介して安全にリクエストを送るためのエンドポイントを構築する
