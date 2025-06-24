@@ -117,7 +117,21 @@ focusbot/
 >2025.6.24
 1. .env.local にAPIキーを設定
 
+.env.localファイルを作成し、FirebaseとOpenAIのキーを記述
+OpenAIのキーは公式HPより自アカウントで作成
 
+2. firebase openai axiosインストール
 
+```
+npm install firebase openai axios
+```
+実行後package.jsonにそれぞれ追加されていることを確認
 
+3. Firebaseプロジェクト作成
 
+Next.jsアプリとFirebaseを接続するために、まずは Firebaseプロジェクトを作成し、必要な機能（Firestore、Authentication）を有効化する
+https://console.firebase.google.com/
+- 上記URLでFirebaseプロジェクトの作成　プロジェクト名：FocusBot  
+- ウェブアプリ作成  
+- Firestore Databaseでデータベース作成  
+- Authenticationを匿名ログイン/メールパスワードで設定

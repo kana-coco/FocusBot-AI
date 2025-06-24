@@ -1,11 +1,11 @@
 ## 実装手順・タスク管理
 
-- [ ] 環境構築
-  - [ ] .env.local にAPIキーを設定
+- [x] 環境構築
+  - [x] .env.local にAPIキーを設定
   - [x] Nodeインストール
-  - [ ] firebase openai axiosインストール
+  - [x] firebase openai axiosインストール
 - [ ] Firebase & OpenAI 接続
-  - [ ] Firebaseプロジェクト作成
+  - [x] Firebaseプロジェクト作成
   - [ ] lib/firebase.ts を作成　AuthとFirestoreを初期化
 - [ ] OpenAI APIとの連携
   - [ ] lib/openai.ts を作成
