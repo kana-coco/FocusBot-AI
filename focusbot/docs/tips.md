@@ -48,3 +48,9 @@ src/app/api/gpt/route.ts
 src/app/api/gpt/route.ts 
 - App Routerでは res.status(200).json() のような旧式ではなく、NextResponse を使うのが標準
 - 型安全でエラーレスポンスも簡潔に記述可能
+  
+
+> npm run devした後にターミナル抜ける方法
+
+control + C
+

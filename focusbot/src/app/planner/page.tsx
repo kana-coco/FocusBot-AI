@@ -8,12 +8,30 @@ export default function PlannerPage() {
   const [result, setResult] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [validationError, setValidationError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError('')
     setResult('')
+    setValidationError('')
+
+    // 🔸 バリデーションチェック
+    if (!prompt.trim()) {
+        setValidationError('入力が空です。学習の目的を入力してください。')
+        return
+      }
+      if (prompt.length < 10) {
+        setValidationError('10文字以上で具体的に記入してください。')
+        return
+      }
+      if (prompt.length > 300) {
+        setValidationError('300文字以内に収めてください。')
+        return
+      }
+  
+      setLoading(true)
 
     try {
       const res = await axios.post('/api/gpt', { prompt })  //フルパス指定せずとも Next.jsが内部でマッピングしてくれる
@@ -45,9 +63,13 @@ export default function PlannerPage() {
         >
           {loading ? '生成中...' : 'プラン生成'}
         </button>
+        {/* バリデーションエラー表示 */}
+        {validationError && <p className="text-yellow-600">{validationError}</p>}
       </form>
 
+      {/* サーバーエラー */}
       {error && <p className="text-red-500 mt-4">{error}</p>}
+      {/* AI生成結果表示 */}
       {result && (
         <div className="mt-6 border p-4 rounded bg-gray-50 whitespace-pre-wrap">
           <h2 className="font-semibold mb-2">AI生成プラン：</h2>

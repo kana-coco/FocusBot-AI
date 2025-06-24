@@ -10,9 +10,9 @@
 - [x] OpenAI APIとの連携
   - [x] lib/openai.ts を作成
   - [x] /app/api/gpt/route.ts でOpenAI APIと接続
-- [ ] 画面構成とページ作成
+- [x] 画面構成とページ作成
   - [x] /app/planner/page.tsx（フォーム＆結果）
-  - [ ] plannerフォームの入力バリデーションを追加
+  - [x] plannerフォームの入力バリデーションを追加
 - [ ] Firestoreとの接続
   - [ ] 学習プランをFirestoreに保存（ユーザー単位）
 - [ ] UI設計とタスク管理
