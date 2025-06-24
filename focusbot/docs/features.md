@@ -135,3 +135,11 @@ https://console.firebase.google.com/
 - ウェブアプリ作成  
 - Firestore Databaseでデータベース作成  
 - Authenticationを匿名ログイン/メールパスワードで設定
+
+4. lib/firebase.ts を作成
+Next.jsアプリから FirebaseのFirestoreとAuth機能 を使えるように、SDKを初期化しておきます。
+これにより、どのコンポーネント・API Routeからでも db や auth を import して使えるようになります。
+
+実装ファイル：lib/firebase.ts
+
+

@@ -30,3 +30,7 @@ FirestoreはNoSQLなので、構造の自由度が高く、ユーザーごとに
 シンプルな構文、レスポンス型整備、タイムアウト設定などが便利
 POSTリクエストやAPIエラー処理がとても簡潔に書ける。
 
+> process.env.NEXT_PUBLIC_...! の 「!」 はなぜ必要？
+lib/firebase.ts
+TypeScriptで「環境変数は必ずあるよ」と明示するための Non-null assertion
+.env.local に値が入っていないとビルド時にエラーになるので、安全性向上にも役立つ

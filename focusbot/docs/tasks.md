@@ -4,9 +4,9 @@
   - [x] .env.local にAPIキーを設定
   - [x] Nodeインストール
   - [x] firebase openai axiosインストール
-- [ ] Firebase & OpenAI 接続
+- [x] Firebase & OpenAI 接続
   - [x] Firebaseプロジェクト作成
-  - [ ] lib/firebase.ts を作成　AuthとFirestoreを初期化
+  - [x] lib/firebase.ts を作成　AuthとFirestoreを初期化
 - [ ] OpenAI APIとの連携
   - [ ] lib/openai.ts を作成
   - [ ] /app/api/gpt/route.ts でOpenAI APIと接続
